@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import { Edit2, Trash2, Plus, Tv, Film } from 'lucide-react';
-import { Media } from '../types';
+import { useState, useEffect, useCallback } from 'react';
+import { Edit2, Trash2, Plus, Tv, Film, Search } from 'lucide-react';
+import type { Media, MediaFilters } from '../types';
 import { mediaAPI } from '../api';
 import MediaForm from './MediaForm';
 

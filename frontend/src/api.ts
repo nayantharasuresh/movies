@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { Media, MediaFormData, PaginationInfo, MediaFilters } from './types';
+import type { Media, MediaFormData, PaginationInfo, MediaFilters } from './types';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
 
 const api = axios.create({
   baseURL: API_BASE_URL,
@@ -12,7 +12,7 @@ export const mediaAPI = {
   async getMedia(
     page: number = 1, 
     limit: number = 10, 
-    filters: MediaFilters = { search: '', type: '', year: '' }
+    filters: MediaFilters = { search: '', type: 'ALL', year: '' }
   ): Promise<{ media: Media[]; pagination: PaginationInfo }> {
     const params = new URLSearchParams();
     params.append('page', page.toString());

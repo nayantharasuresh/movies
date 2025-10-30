@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { X } from 'lucide-react';
-import { Media, MediaFormData } from '../types';
+import type { Media, MediaFormData } from '../types';
 import { mediaAPI } from '../api';
+
 
 interface MediaFormProps {
   isOpen: boolean;

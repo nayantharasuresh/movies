@@ -1,4 +1,3 @@
-import React from 'react';
 import MediaTable from './components/MediaTable';
 
 function App() {
